@@ -67,7 +67,7 @@
 								</h2>
 								The Node.js website defines it as:
 								<blockquote>
-								Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.
+									Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.
 								</blockquote>
 							</section>							
 							<section>
@@ -76,7 +76,7 @@
 								</h2>
 								I would define it as:						
 								<blockquote>
-								Node.js is an event-driven, non-blocking I/O, cross-platform runtime environment for building server side and networking applications using JavaScript
+									Node.js is an event-driven, non-blocking I/O, cross-platform runtime environment for building server side and networking applications using JavaScript
 								</blockquote>
 							</section>
 						</section>
@@ -98,7 +98,13 @@
 						<li>First LTS (4.2.0) released in October 2015</li>
 						<li>Latest release (5.1.0) released in Novermber 2015</li>
 					</ul>
-				</section>							
+				</section>	
+				
+				<section>
+					<h2>
+						Event Driven Programming
+					</h2>
+				</section>						
 				
 				<section>
 					<h2>
@@ -111,23 +117,60 @@
 				
 				<section>
 					<h2>
-						Node.js Event Loop
+						V8						
 					</h2>
 					<p>
-						<img src="images/nodejs-event-loop.jpg" style="border: 0px"/>
+						V8 is a JavaScript engine written in C++.
+						<ul>
+							<li>JIT (Just-In-Time) compiler instead of a JavaScript interpreter.</li>
+							<li>Asynchronous TCP and UDP sockets</li>
+							<li>Asynchronous DNS resolution</li>
+							<li>Asynchronous file and file system operations</li>
+							<li>File system events</li>
+							<li>IPC with socket sharing, using Unix domain sockets or named pipes (Windows)</li>
+							<li>Child processes</li>
+							<li>Thread pool</li>							
+						</ul>
 					</p>
 				</section>
 				
 				<section>
 					<h2>
-						Where to use Node.js
+						Libuv						
 					</h2>
 					<p>
+						libuv is a multi-platform support library with a focus on asynchronous I/O.
 						<ul>
-							<li class="fragment">Hosting Static files</li>
-							<li class="fragment">Automation libraries like glup, grunt, sass or css compilers, bower etc</li>
-							<li class="fragment">Build automation and productivity tools for internal use</li>																			
-						</ul>	
+							<li>Full-featured event loop backed by epoll, kqueue, IOCP, event ports.</li>
+							<li>Asynchronous TCP and UDP sockets</li>
+							<li>Asynchronous DNS resolution</li>
+							<li>Asynchronous file and file system operations</li>
+							<li>File system events</li>
+							<li>IPC with socket sharing, using Unix domain sockets or named pipes (Windows)</li>
+							<li>Child processes</li>
+							<li>Thread pool</li>							
+						</ul>
+					</p>
+				</section>
+				
+				<section>
+					<h2>
+						Multi threaded HTTP Server (Blocking I/O)
+					</h2>
+				</section>						
+				
+				<section>
+					<h2>
+						Node.Js HTTP Server ( Nonblocking I/O)
+					</h2>
+				</section>						
+				
+				<section>
+					<h2>
+						Node.js Event Loop
+					</h2>
+					<p>
+						<img src="images/nodejs-event-loop.jpg" style="border: 0px"/>
 					</p>
 				</section>
 				
@@ -145,20 +188,74 @@
 				
 				<section>
 					<h2>
+						Pros & Cons
+					</h2>
+					<p>
+						Pros of using Node.js
+						<ul>
+							<li class="fragment">Fast - Execution Speed</li>
+							<li class="fragment">ALM turnaround is small</li>
+							<li class="fragment">Great Community</li>
+							<li class="fragment">Proven to handle high volume systems</li>
+							<li class="fragment">Most suited for networking applications</li>
+							<li class="fragment">Most suited for I/O intensive applications</li>						 																			
+						</ul>
+					</p>
+				</section>
+				
+				<section>
+					<h2>
+						Pros & cons
+					</h2>
+					<p>
+						Cons of using Node.js
+						<ul>
+							<li class="fragment">Writing event driven code have a learning curve</li>
+							<li class="fragment">Writing nuge business centric systems</li>
+							<li class="fragment">Callback hell</li>
+							<li class="fragment">Exeception handling is not straight forward</li>
+						</ul>
+					</p>	
+				</section>
+				
+				<section>
+					<h2>
+						Best Scenarios for using Node.js
+					</h2>
+					<p>
+						<ul>
+							<li class="fragment">Most suited for networking & I/O intensive applications</li>
+							<li class="fragment">Application that need high concurrency & queued concurrent inputs</li>
+							<li class="fragment">Streaming applications like media streaming, chat applications</li>
+							<li class="fragment">Proxy service</li>
+							<li class="fragment">Real time applications</li>
+							<li class="fragment">Dashboard applications</li>
+							<li class="fragment">Exposing REST APIs</li>
+						</ul>
+					</p>	
+				</section>
+				
+				<section>
+					<h2>
 						REPL
 					</h2>
 					<p>
-						
+						REPL - Read, Evaluate, Print, Loop 
 					</p>
 				</section>				
 				
 				<section>
 					<h2>
-						Demos
+						Demos						
 					</h2>	
+					<p>
+						- REPL hands on!
+						- Hello World Application
+						- A Simple Web server
+					</p>
 				</section>
 					
-				<section id="fragments">
+				<section>
 					<h2>
 						How can we make use of Node.js
 					</h2>
