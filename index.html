@@ -104,6 +104,9 @@
 					<h2>
 						Event Driven Programming
 					</h2>
+					<p class="fragment">
+						Is a programming paradigm in which the flow of the program is determined by events such as user actions (mouse clicks, key presses), sensor outputs, or messages from other programs/threads
+					</p>
 				</section>						
 				
 				<section>
@@ -123,13 +126,8 @@
 						V8 is a JavaScript engine written in C++.
 						<ul>
 							<li>JIT (Just-In-Time) compiler instead of a JavaScript interpreter.</li>
-							<li>Asynchronous TCP and UDP sockets</li>
-							<li>Asynchronous DNS resolution</li>
-							<li>Asynchronous file and file system operations</li>
-							<li>File system events</li>
-							<li>IPC with socket sharing, using Unix domain sockets or named pipes (Windows)</li>
-							<li>Child processes</li>
-							<li>Thread pool</li>							
+							<li>V8 implements ECMAScript as specified in ECMA-262</li>
+							<li>It can run standalone, or can be embedded into any C++ application.</li>							
 						</ul>
 					</p>
 				</section>
@@ -155,14 +153,21 @@
 				
 				<section>
 					<h2>
-						Multi threaded HTTP Server (Blocking I/O)
+						Multi threaded HTTP Server
 					</h2>
+					<p>
+						<img src="images/multithread-server.png" style="border: 0px"/>
+					</p>
 				</section>						
 				
 				<section>
 					<h2>
-						Node.Js HTTP Server ( Nonblocking I/O)
+						Node.Js HTTP Server 
 					</h2>
+					<p>
+						<img src="images/nodejs-server.png" style="border: 0px"/>
+						<span class="left" style="font-size:12px"> courtesy: <a href="https://strongloop.com/strongblog/node-js-is-faster-than-java/">Strongloop</a> 
+					</p>
 				</section>						
 				
 				<section>
@@ -171,6 +176,7 @@
 					</h2>
 					<p>
 						<img src="images/nodejs-event-loop.jpg" style="border: 0px"/>
+						<span class="left" style="font-size:12px"> courtesy: <a href="https://strongloop.com/strongblog/node-js-is-faster-than-java/">Strongloop</a>
 					</p>
 				</section>
 				
@@ -180,6 +186,18 @@
 				
 				<section>
 					<h2>Concepts: Callbacks</h2>
+					 <pre class="fragment"><code>
+function slowAlert() {
+  alert("That was really slow!");
+}
+.
+.
+.
+timeoutID = window.setTimeout(slowAlert, 2000);
+					</code></pre>
+					<p class="fragment">
+					Callback is a parameter to a function that happens to be a function itself!
+					</p>
 				</section>
 				
 				<section>
