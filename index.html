@@ -183,26 +183,59 @@
 				
 				<section>
 					<h2>Concepts: Modules</h2>
+					<p>
+						<ul>
+							<li>Provides a way to break large JavaScript application into multiple files</li>
+							<li>Provides ability to reuse the code, share it etc</li>
+							<li>Node.js implements the Common.Js Module pattern</li>
+							<li>You can include a module by using 'require'. <pre class="fragment"><code>var myModule =  require('module-name');</code></pre> </li>
+							<li>You can export functionality using 'exports' in a Module <pre class="fragment"><code>exports.variable = variable / function;</code></pre> </li>		
+												
+					</p>
+				</section>
+				
+				<section>
+					<h2>Concepts: Modules</h2>
+					<p>					
+						How Modules are loaded?
+						<ul class="fragment">
+							<li>&nbsp; Global always overrides the local</li>
+							<li>&nbsp; Looks for module in node_modules folder</li>
+							<li>&nbsp; Traveses up the directory heirarchy </li>
+							<li>&nbsp; Looks for *.js, *.json & *.node </li>		
+						</ul>						
+					</p>
 				</section>
 				
 				<section>
 					<h2>Concepts: Callbacks</h2>
-					 <pre class="fragment"><code>
-function slowAlert() {
+<pre class="fragment"><code>function slowAlert() {
   alert("That was really slow!");
 }
 .
 .
 .
-timeoutID = window.setTimeout(slowAlert, 2000);
-					</code></pre>
+timeoutID = window.setTimeout(slowAlert, 2000);</code></pre>
 					<p class="fragment">
-					Callback is a parameter to a function that happens to be a function itself!
+					 - Callback is a parameter to a function that happens to be a function itself!
 					</p>
 				</section>
-				
+				<section>
+					<h2>Concepts: Callbacks</h2>
+					<p style="text-align: left" >
+						-  All APIs of Node are written is such a way that they supports callbacks.<br/>
+						- In Node.js a callback function is called at the completion of a given task.<br/>	
+						- Node.js uses a callback concept called "error-first callbacks".<br/>			
+					</p>
+<pre class="fragment"><code>fs.readFile('input.txt', function (err, data) {
+    if (err) return console.error(err);
+    console.log(data.toString());
+});</pre></code>
+				</section>			
 				<section>
 					<h2>Concepts: Events</h2>
+					<p>
+					</p>
 				</section>
 				
 				<section>
@@ -212,12 +245,12 @@ timeoutID = window.setTimeout(slowAlert, 2000);
 					<p>
 						Pros of using Node.js
 						<ul>
-							<li class="fragment">Fast - Execution Speed</li>
-							<li class="fragment">ALM turnaround is small</li>
-							<li class="fragment">Great Community</li>
-							<li class="fragment">Proven to handle high volume systems</li>
-							<li class="fragment">Most suited for networking applications</li>
-							<li class="fragment">Most suited for I/O intensive applications</li>						 																			
+							<li>Fast - Execution Speed</li>
+							<li>ALM turnaround is small</li>
+							<li>Great Community</li>
+							<li>Proven to handle high volume systems</li>
+							<li>Most suited for networking applications</li>
+							<li>Most suited for I/O intensive applications</li>						 																			
 						</ul>
 					</p>
 				</section>
@@ -229,10 +262,10 @@ timeoutID = window.setTimeout(slowAlert, 2000);
 					<p>
 						Cons of using Node.js
 						<ul>
-							<li class="fragment">Writing event driven code have a learning curve</li>
-							<li class="fragment">Writing nuge business centric systems</li>
-							<li class="fragment">Callback hell</li>
-							<li class="fragment">Exeception handling is not straight forward</li>
+							<li>Writing event driven code have a learning curve</li>
+							<li>Writing nuge business centric systems</li>
+							<li>Callback hell</li>
+							<li>Exeception handling is not straight forward</li>
 						</ul>
 					</p>	
 				</section>
@@ -243,13 +276,13 @@ timeoutID = window.setTimeout(slowAlert, 2000);
 					</h2>
 					<p>
 						<ul>
-							<li class="fragment">Most suited for networking & I/O intensive applications</li>
-							<li class="fragment">Application that need high concurrency & queued concurrent inputs</li>
-							<li class="fragment">Streaming applications like media streaming, chat applications</li>
-							<li class="fragment">Proxy service</li>
-							<li class="fragment">Real time applications</li>
-							<li class="fragment">Dashboard applications</li>
-							<li class="fragment">Exposing REST APIs</li>
+							<li>Most suited for networking & I/O intensive applications</li>
+							<li>Application that need high concurrency & queued concurrent inputs</li>
+							<li>Streaming applications like media streaming, chat applications</li>
+							<li>Proxy service</li>
+							<li>Real time applications</li>
+							<li>Dashboard applications</li>
+							<li>Exposing REST APIs</li>
 						</ul>
 					</p>	
 				</section>
@@ -259,7 +292,11 @@ timeoutID = window.setTimeout(slowAlert, 2000);
 						REPL
 					</h2>
 					<p>
-						REPL - Read, Evaluate, Print, Loop 
+						<ul>
+							<li>REPL - Read, Evaluate, Print, Loop</li>
+							<li>It is the Node.js shell</li>
+							<li>It provides a way to interactively run JavaScript and see the results</li>
+							<li>REPL can be started by simply running node on shell/console without any argument</li> 
 					</p>
 				</section>				
 				
