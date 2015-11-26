@@ -225,7 +225,22 @@ timeoutID = window.setTimeout(slowAlert, 2000);</code></pre>
 				<section>
 					<h2>Concepts: Events</h2>
 					<p>
-						
+						<ul>
+							<li> Node.js is coded around events</li>
+							<li> You start your server, initiate most of the variables, declare your functions and then just wait for an event to occur.</li>
+							<li> There are lots of built-in events </li>
+							<li> You have the ability to create events using events module </li>
+						</ul>
+<pre class="fragment"><code>var events = require('events');
+var eventEmitter = new events.EventEmitter();
+
+var sayHello = function() {
+  console.log('Hello there..');
+}
+
+eventEmitter.on('sayHello', sayHello);
+
+eventEmitter.emit('sayHello');</pre></code>							
 					</p>
 				</section>
 				
